@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the character encoding and sets the page to display correctly on all devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Random Storymaker</title>
+    
+    
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main section of the toy board with left and right panels -->
+        <div class="toy-board">
+            <!-- Left panel containing all the options for the story -->
+            <div class="left-panel">
+                
+                <!-- First column with options for the subject of the story -->
+                <div class="column" id="column1">
+                    <!-- Each button represents a different option in the first part of the story (subject) -->
+                    <button onclick="cycleOptions(0)" id="part1" class="option-button">Swati</button>
+                    <button onclick="cycleOptions(0)" class="option-button">Ramesh</button>
+                    <button onclick="cycleOptions(0)" class="option-button">The Wizard</button>
+                    <button onclick="cycleOptions(0)" class="option-button">The Sun</button>
+                    <button onclick="cycleOptions(0)" class="option-button">Suresh</button>
+                </div>
+
+                <!-- Second column with options for the verb/action -->
+                <div class="column" id="column2">
+                    <!-- Each button represents a different action/verb for the second part of the story -->
+                    <button onclick="cycleOptions(1)" id="part2" class="option-button">sat on</button>
+                    <button onclick="cycleOptions(1)" class="option-button">loves</button>
+                    <button onclick="cycleOptions(1)" class="option-button">makes</button>
+                    <button onclick="cycleOptions(1)" class="option-button">teaches</button>
+                    <button onclick="cycleOptions(1)" class="option-button">is lazy</button>
+                </div>
+
+                <!-- Third column with options for a descriptor or object -->
+                <div class="column" id="column3">
+                    <!-- Each button represents a different object descriptor for the third part of the story -->
+                    <button onclick="cycleOptions(2)" id="part3" class="option-button">the red</button>
+                    <button onclick="cycleOptions(2)" class="option-button">to play</button>
+                    <button onclick="cycleOptions(2)" class="option-button">piano</button>
+                    <button onclick="cycleOptions(2)" class="option-button">weird face</button>
+                    <button onclick="cycleOptions(2)" class="option-button">under tree</button>
+                </div>
+
+                <!-- Fourth column with additional actions or objects -->
+                <div class="column" id="column4">
+                    <!-- Each button represents different options to extend the action in the fourth part of the story -->
+                    <button onclick="cycleOptions(3)" id="part4" class="option-button">bicycle</button>
+                    <button onclick="cycleOptions(3)" class="option-button">and</button>
+                    <button onclick="cycleOptions(3)" class="option-button">danced with</button>
+                    <button onclick="cycleOptions(3)" class="option-button">and arrests</button>
+                    <button onclick="cycleOptions(3)" class="option-button">to make</button>
+                </div>
+
+                <!-- Fifth column with options for extra details -->
+                <div class="column" id="column5">
+                    <!-- Each button represents a different option for extra details in the final part of the story -->
+                    <button onclick="cycleOptions(4)" id="part5" class="option-button">on Saturday</button>
+                    <button onclick="cycleOptions(4)" class="option-button">eats pizza</button>
+                    <button onclick="cycleOptions(4)" class="option-button">crocodile</button>
+                    <button onclick="cycleOptions(4)" class="option-button">Rapunzel</button>
+                    <button onclick="cycleOptions(4)" class="option-button">cocktail</button>
+                </div>
+            </div>
+
+            <!-- Right panel containing the action buttons -->
+            <div class="right-panel">
+                <!-- Button to display the final story -->
+                <button id="playStory" onclick="showStory()">Play Story</button>
+                <!-- Button to reset the story selections -->
+                <button id="resetStory" onclick="resetStory()">Reset</button>
+                <!-- Button to convert the story to speech -->
+                <button id="speak" onclick="convertToSpeech()">Speak</button>
+            </div>
+        </div>
+
+        <!-- Element to display the completed story -->
+        <div id="storyDisplay" class="story-output"></div>
+    </div>
+
+    <!-- Link to the external JavaScript file for functionality -->
+    <script src="../Js/script.js"></script>
+</body>
+</html>
